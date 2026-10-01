@@ -16,9 +16,11 @@
 
 		function leak(enable = true) {
 			keepLeaking = enable;
-			while (keepLeaking) {
+			for (let i = 0; i < 10; i++) {
 				metaTag.content = "#ff0000";
 				metaTag.content = "#00ff00";
+			}
+			while (keepLeaking) {
 			}
 		}
 	</script>
