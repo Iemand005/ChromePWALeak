@@ -1,6 +1,6 @@
 {
-	"name": "VulpOS",
-	"short_name": "VulpOS",
+	"name": "PWA Memory Leak Demo",
+	"short_name": "PWA Leak",
 	"start_url": "./index.html",
 	"display": "standalone",
 	"background_color": "#242424",
