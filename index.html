@@ -11,10 +11,16 @@
 
 	<script>
 		const metaTag = document.querySelector('meta[name="theme-color"]');
+
+		let keepLeaking = true;
+
+		function leak() {
+			while (keepLeaking)
+		}
 	</script>
 </head>
 <body>
 	Please install me and press the leak button!
-	<button>Leak!</button>
+	<button onclick="leak()">Leak!</button>
 </body>
 </html>
