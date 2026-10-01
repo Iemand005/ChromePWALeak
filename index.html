@@ -12,22 +12,19 @@
 	<script>
 		const metaTag = document.querySelector('meta[name="theme-color"]');
 
-		let keepLeaking = true;
 
-		function leak(enable = true) {
-			keepLeaking = enable;
+		function leak() {
 			for (let i = 0; i < 10; i++) {
 				metaTag.content = "#ff0000";
 				metaTag.content = "#00ff00";
 			}
-			while (keepLeaking) {
-			}
 		}
+		function crash() { while (true) leak() }
 	</script>
 </head>
 <body>
 	Please install me and check the box to start leaking!
-	<label for="leak"></label>
-	<input type="checkbox" name="leak" id="leak" onchange="leak(this.checked)">
+	<button onclick="leak()">Leak!</button>
+	<button onclick="crash()">Crash!</button>
 </body>
 </html>
