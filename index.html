@@ -13,11 +13,13 @@
 		const metaTag = document.querySelector('meta[name="theme-color"]');
 
 		let keepLeaking = true;
-		let isLeaking = false;
 
 		function leak(enable = true) {
 			keepLeaking = enable;
-			while (keepLeaking)
+			while (keepLeaking) {
+				metaTag.content = "#ff0000";
+				metaTag.content = "#00ff00";
+			}
 		}
 	</script>
 </head>
